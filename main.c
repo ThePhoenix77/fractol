@@ -26,29 +26,45 @@ void		menu(t_fractol *t)
 void		string_put(t_fractol *t)
 {
 	mlx_string_put(t->ptr, t->win, 650, 70, 0xf7b079,
-			"       Scroll UP | Scroll DOWN         ");
-	mlx_string_put(t->ptr, t->win, 650, 110, 0xFFFFFF,
-			"-------------MOVE------------");
-	mlx_string_put(t->ptr, t->win, 650, 140, 0xf7b079,
-			"        Arrow UP | Arrow DOWN    ");
-	mlx_string_put(t->ptr, t->win, 650, 180, 0xf7b079,
-			"     Arrow RIGHT | Arrow LIFT ");
+			"     Scroll UP   Scroll DOWN         ");
+	mlx_string_put(t->ptr, t->win, 650, 70, 0xFFFF00,
+			"               |");
+	mlx_string_put(t->ptr, t->win, 650, 95, 0xf7b079,
+			"    to zoom in   to zoom out         ");
+	mlx_string_put(t->ptr, t->win, 650, 95, 0xFFFF00,
+			"               |");
+	mlx_string_put(t->ptr, t->win, 650, 120, 0xFFFFFF,
+			"-------------MOVE-------------");
+	mlx_string_put(t->ptr, t->win, 650, 150, 0xf7b079,
+			"      Arrow UP   Arrow DOWN    ");
+	mlx_string_put(t->ptr, t->win, 650, 150, 0xFFFF00,
+			"               |");
+	mlx_string_put(t->ptr, t->win, 650, 200, 0xf7b079,
+			"   Arrow RIGHT   Arrow LEFT ");
+	mlx_string_put(t->ptr, t->win, 650, 200, 0xFFFF00,
+			"               |");
 	mlx_string_put(t->ptr, t->win, 650, 240, 0xFFFFFF,
-			"--------CHANGE FRACTAL-------");
+			"--------CHANGE FRACTAL--------");
 	mlx_string_put(t->ptr, t->win, 650, 280, 0xf7b079,
-			"      Mandelbrot | BUTTON (3) ");
+			"    Mandelbrot | PRESS (3) ");
+	mlx_string_put(t->ptr, t->win, 650, 280, 0xFFFF00,
+			"               |");
 	mlx_string_put(t->ptr, t->win, 650, 310, 0xf7b079,
-			"     BurningShip | BUTTON (2) ");
+			"   BurningShip | PRESS (2) ");
+	mlx_string_put(t->ptr, t->win, 650, 310, 0xFFFF00,
+			"               |");
 	mlx_string_put(t->ptr, t->win, 650, 340, 0xf7b079,
-			"           julia | BUTTON (1) ");
+			"         julia | PRESS (1) ");
+	mlx_string_put(t->ptr, t->win, 650, 340, 0xFFFF00,
+			"               |");
 	mlx_string_put(t->ptr, t->win, 650, 380, 0xFFFFFF,
-			"--------CHANGE COLOR-------");
+			"--------SWITCH COLORS---------");
 	mlx_string_put(t->ptr, t->win, 650, 410, 0xf7b079,
-			"           BUTTON (enter) ");
+			"         PRESS (enter) ");
 	mlx_string_put(t->ptr, t->win, 650, 440, 0xFFFFFF,
 			"--------RESTART FRACTAL-------");
 	mlx_string_put(t->ptr, t->win, 650, 470, 0xf7b079,
-			"           BUTTON (0) ");
+			"           PRESS (0) ");
 }
 
 void		init(t_fractol *t, char *str)
