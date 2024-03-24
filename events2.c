@@ -1,47 +1,51 @@
 #include "fractol.h"
 
-void		simple_zoome1(t_fractol *t)
+void		simple_zoome1(t_fractol *fractol)
 {
-	if (t->start_x < 0 && t->start_y < 0 && t->end_x > 0 && t->end_y > 0)
+	if (fractol->start_x < 0 && fractol->start_y < 0 && fractol->end_x > 0 && fractol->end_y > 0)
 	{
-		t->start_x = t->start_x + 0.015;
-		t->start_y = t->start_y + 0.015;
-		t->end_x = t->end_x - 0.015;
-		t->end_y = t->end_y - 0.015;
+		fractol->start_x = fractol->start_x + 0.015;
+		fractol->start_y = fractol->start_y + 0.015;
+		fractol->end_x = fractol->end_x - 0.015;
+		fractol->end_y = fractol->end_y - 0.015;
 	}
 }
 
-void		simple_zoome2(t_fractol *t)
+void		simple_zoome2(t_fractol *fractol)
 {
-	t->start_x = t->start_x - 0.040;
-	t->start_y = t->start_y - 0.040;
-	t->end_x = t->end_x + 0.040;
-	t->end_y = t->end_y + 0.040;
+	fractol->start_x = fractol->start_x - 0.040;
+	fractol->start_y = fractol->start_y - 0.040;
+	fractol->end_x = fractol->end_x + 0.040;
+	fractol->end_y = fractol->end_y + 0.040;
 }
 
-void		init_x_y(t_fractol *t)
+void		init_x_y(t_fractol *fractol)
 {
-	t->x = ((t->x_x / (double)WIDTH) *
-	(t->end_x - t->start_x)) + t->start_x;
-	t->y = ((t->y_y / (double)HIGHT) *
-	(t->end_y - t->start_y)) + t->start_y;
+	fractol->x = ((fractol->x_x / (double)WIDTH) *
+	(fractol->end_x - fractol->start_x)) + fractol->start_x;
+	fractol->y = ((fractol->y_y / (double)HIGHT) *
+	(fractol->end_y - fractol->start_y)) + fractol->start_y;
 }
 
-void		string1_put(t_fractol *t)
+void		string1_put(t_fractol *fractol)
 {
-	mlx_string_put(t->ptr, t->win, 650, 10, 0xFFFFFF,
+	mlx_string_put(fractol->ptr, fractol->win, 650, 10, 0xFFFFFF,
 			"-------------ZOOM-------------");
-	mlx_string_put(t->ptr, t->win, 650, 40, 0xf7b079,
-			"               + | -              ");
-	mlx_string_put(t->ptr, t->win, 650, 500, 0xFFFFFF,
-			"-------------Iteration-------------");
-	mlx_string_put(t->ptr, t->win, 650, 520, 0xf7b079,
-			"               + | -              ");
+	mlx_string_put(fractol->ptr, fractol->win, 650, 40, 0xf7b079,
+			"             +   -              ");
+	mlx_string_put(fractol->ptr, fractol->win, 650, 40, 0xFFFF00,
+			"               |");
+	mlx_string_put(fractol->ptr, fractol->win, 650, 500, 0xFFFFFF,
+			"-----------ITERATION----------");
+	mlx_string_put(fractol->ptr, fractol->win, 650, 520, 0xf7b079,
+			"             +   -              ");
+	mlx_string_put(fractol->ptr, fractol->win, 650, 520, 0xFFFF00,
+			"               |");
 }
 
-void		destroy_exit(t_fractol *t)
+void		destroy_exit(t_fractol *fractol)
 {
-	mlx_destroy_image(t->ptr, t->image);
-	mlx_destroy_window(t->ptr, t->win);
-	free(t->ptr);
+	mlx_destroy_image(fractol->ptr, fractol->image);
+	mlx_destroy_window(fractol->ptr, fractol->win);
+	free(fractol->ptr);
 }
