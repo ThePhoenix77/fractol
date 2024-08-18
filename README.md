@@ -45,6 +45,6 @@ This initial version focuses on core functionality. You can explore potential im
   *  Add user interface elements for customization options.
 
 ## Contributing
-I welcome contributions to this project! Please refer to the CONTRIBUTING.md file (if included) for guidelines on submitting pull requests.
+I welcome contributions to this project! Please refer to the CONTRIBUTING.md file for guidelines on submitting pull requests.
 
 This README provides a basic understanding of the fractol project. Feel free to explore the code and experiment with different functionalities!
