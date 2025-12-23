@@ -39,10 +39,3 @@ I appreciate contributions that:
 I reserve the right to review and potentially reject contributions that don't align with the project's goals or introduce technical issues.
 
 ### Thank You!
-I appreciate your willingness to contribute to the fractol project. Your efforts will help me create a more robust and valuable tool for exploring the fascinating world of fractals.
-
-
-
-
-
-
