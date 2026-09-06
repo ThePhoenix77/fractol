@@ -1,9 +1,13 @@
 # fractol: Fractal Visualization with C and MLX
 
-<img width="374" height="250" alt="mandelbrot-zoom-fractal" src="https://github.com/user-attachments/assets/7f1897ed-a839-445e-927b-c1c082fa6bb8" />
-
 ## What are Fractals?
 Fractals are self-similar mathematical objects exhibiting intricate patterns that repeat at different scales. They often possess beauty and complexity arising from relatively simple rules or equations.
+
+## Demo:
+
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/0f4a0e55-be82-4fd3-a142-bee21827ad07" controls width="100%"></video>
+</div>
 
 ## Project Overview
 fractol allows you to explore various fractal sets by generating corresponding images. The program currently supports the implementation of the following classic fractals:
@@ -36,9 +40,6 @@ The program utilizes the MLX library for low-level graphics manipulation. This a
   *  Arrow keys: Navigate within the fractal space (zooming).
   *  Mouse wheel: Zoom in/out on the fractal.
   *  Escape key: Exit the program.
-
-## Demo:
-https://github.com/user-attachments/assets/0f4a0e55-be82-4fd3-a142-bee21827ad07
 
 ## Customization:
 
